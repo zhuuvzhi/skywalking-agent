@@ -17,3 +17,5 @@ RUN tar -zxvf apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz && \
 RUN apk --no-cache add tzdata  && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
+
+RUN echo 'build done'
