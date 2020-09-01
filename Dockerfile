@@ -7,7 +7,8 @@ ENV SKYWALKING_VERSION=7.0.0
 ADD https://mirrors.bfsu.edu.cn/apache/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz /
 
 RUN tar -zxvf apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz && \
-    copy -r apache-skywalking-apm-bin/agent skywalking/agent && \
+    mkdir skywalking && \
+    mv  apache-skywalking-apm-bin/agent skywalking/agent && \
     mv /skywalking/agent/optional-plugins/apm-trace-ignore-plugin* /skywalking/agent/plugins/ && \
     rm -f apache-skywalking-apm-${SKYWALKING_VERSION}.tar.gz &&\
     echo -e "\n# Ignore Path" >> /skywalking/agent/config/agent.config && \
