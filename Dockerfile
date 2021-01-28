@@ -3,7 +3,8 @@ FROM frolvlad/alpine-java:jdk8-slim
 LABEL maintainer="alex.zhu@gmail.com"
 
 ENV SKYWALKING_VERSION=8.1.0
-ADD https://www.apache.org/dyn/closer.cgi/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz /
+#https://mirror.bit.edu.cn/apache/skywalking/8.1.0/apache-skywalking-apm-es7-8.1.0.tar.gz
+ADD https://mirror.bit.edu.cn/apache/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz /
 
 RUN tar -zxvf apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz && \
     mkdir -p skywalking/agent &&\
