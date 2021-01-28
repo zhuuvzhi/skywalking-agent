@@ -6,7 +6,7 @@ ENV SKYWALKING_VERSION=8.1.0
 ADD https://www.apache.org/dyn/closer.cgi/skywalking/${SKYWALKING_VERSION}/apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz /
 
 RUN tar -zxvf apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz && \
-    mv apache-skywalking-apm-bin skywalking && \
+    mv apache-skywalking-apm-bin-es7 skywalking && \
     mv /skywalking/agent/optional-plugins/apm-trace-ignore-plugin* /skywalking/agent/plugins/ && \
     rm -f apache-skywalking-apm-es7-${SKYWALKING_VERSION}.tar.gz &&\
     echo -e "\n# Ignore Path" >> /skywalking/agent/config/agent.config && \
