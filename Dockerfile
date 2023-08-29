@@ -4,7 +4,7 @@ LABEL maintainer="alex.zhu@gmail.com"
 
 ENV SKYWALKING_VERSION=8.16.0
 
-ADD https://dlcdn.apache.org/skywalking/java-agent/${SKYWALKING_VERSION}/apache-skywalking-java-agent-${SKYWALKING_VERSION}.tgz 
+ADD https://dlcdn.apache.org/skywalking/java-agent/${SKYWALKING_VERSION}/apache-skywalking-java-agent-${SKYWALKING_VERSION}.tgz /
 
 RUN tar -zxvf apache-skywalking-java-agent-${SKYWALKING_VERSION}.tgz && \
     rm -f apache-skywalking-java-agent-${SKYWALKING_VERSION}.tgz &&\
